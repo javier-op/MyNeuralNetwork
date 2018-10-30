@@ -19,13 +19,9 @@ class TestNeuralNetwork(unittest.TestCase):
         self.train_xor_gate(network, 1000)
 
         network.feed([0, 0])
-        print(network.get_output())
         network.feed([0, 1])
-        print(network.get_output())
         network.feed([1, 0])
-        print(network.get_output())
         network.feed([1, 1])
-        print(network.get_output())
 
     @staticmethod
     def create_neural_network():
@@ -72,12 +68,18 @@ class TestNeuralNetwork(unittest.TestCase):
         errors3 = network.last_layer.get_errors()
         deltas3 = network.last_layer.get_deltas()
 
-        print(errors1)
-        print(deltas1)
-        print(errors2)
-        print(deltas2)
-        print(errors3)
-        print(deltas3)
+        self.assertAlmostEqual(errors1[0], -0.00388, places=4)
+        self.assertAlmostEqual(errors1[1], -0.00388, places=4)
+        self.assertAlmostEqual(deltas1[0], -0.00040, places=4)
+        self.assertAlmostEqual(deltas1[1], -0.00029, places=4)
+
+        self.assertAlmostEqual(errors2[0], -0.02672, places=4)
+        self.assertAlmostEqual(errors2[1], -0.02672, places=4)
+        self.assertAlmostEqual(deltas2[0], -0.00289, places=4)
+        self.assertAlmostEqual(deltas2[1], -0.00232, places=4)
+
+        self.assertAlmostEqual(errors3[0], -0.42428, places=4)
+        self.assertAlmostEqual(deltas3[0], -0.02969, places=4)
 
     def test_train(self):
         network = self.create_neural_network()
@@ -89,11 +91,20 @@ class TestNeuralNetwork(unittest.TestCase):
         weights3 = network.last_layer.get_weights()
         bias3 = network.last_layer.get_bias()
 
-        print(weights1)
-        print(bias1)
-        print(weights2)
-        print(bias2)
-        print(weights3)
-        print(bias3)
+        self.assertAlmostEqual(weights1[0][0], 0.49991, places=4)
+        self.assertAlmostEqual(weights1[0][1], 0.49983, places=4)
+        self.assertAlmostEqual(weights1[1][0], 0.59994, places=4)
+        self.assertAlmostEqual(weights1[1][1], 0.59988, places=4)
+        self.assertAlmostEqual(bias1[0], 0.49991, places=4)
+        self.assertAlmostEqual(bias1[1], 0.59994, places=4)
 
+        self.assertAlmostEqual(weights2[0][0], 0.69948, places=4)
+        self.assertAlmostEqual(weights2[0][1], 0.69946, places=4)
+        self.assertAlmostEqual(weights2[1][0], 0.79958, places=4)
+        self.assertAlmostEqual(weights2[1][1], 0.79957, places=4)
+        self.assertAlmostEqual(bias2[0], 0.69942, places=4)
+        self.assertAlmostEqual(bias2[1], 0.79953, places=4)
 
+        self.assertAlmostEqual(weights3[0][0], 0.89479, places=4)
+        self.assertAlmostEqual(weights3[0][1], 0.89463, places=4)
+        self.assertAlmostEqual(bias3[0], 0.89406, places=4)

@@ -1,5 +1,4 @@
-from NeuralNetwork import NeuralNetwork
-from NeuronLayer import NeuronLayer
+from NeuralNetwork import NeuralNetwork, NeuronLayer
 from Neurons import Sigmoid
 import unittest
 

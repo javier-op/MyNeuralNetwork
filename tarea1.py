@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from NeuralNetwork import NeuralNetwork
 from Neurons import Sigmoid
 import time
@@ -48,3 +49,55 @@ def train_dataset(network, n):
             input_data = data.iloc[j].values[0:4]
             expected = class_mapping[data.iloc[j].values[4]]
             network.train(input_data, expected)
+
+
+def approx_class(result):
+    if result[0] > result[1] and result[0] > result[2]:
+        return [1, 0, 0]
+    elif result[1] > result[2]:
+        return [0, 1, 0]
+    else:
+        return [0, 0, 1]
+
+
+def get_f1_score(network):
+    tp = np.zeros(3)
+    fp = np.zeros(3)
+    fn = np.zeros(3)
+    index = {
+        (1, 0, 0): 0,
+        (0, 1, 0): 1,
+        (0, 0, 1): 2
+    }
+    for i in range(data.shape[0]):
+        input_data = data.iloc[i].values[0:4]
+        expected = class_mapping[data.iloc[i].values[4]]
+        network.feed(input_data)
+        result = approx_class(network.get_output())
+        if expected == result:
+            tp[index[tuple(expected)]] += 1
+        else:
+            fp[index[tuple(result)]] += 1
+            fn[index[tuple(expected)]] += 1
+    precision = np.mean(tp / (tp + fp + 0.001))
+    recall = np.mean(tp / (tp + fn + 0.001))
+    return (precision + recall) / 2
+
+
+network = NeuralNetwork(Sigmoid, 0.2, [4, 4, 3])
+train_dataset(network, 10)
+print(get_f1_score(network))
+train_dataset(network, 10)
+print(get_f1_score(network))
+train_dataset(network, 10)
+print(get_f1_score(network))
+train_dataset(network, 10)
+print(get_f1_score(network))
+train_dataset(network, 10)
+print(get_f1_score(network))
+train_dataset(network, 10)
+print(get_f1_score(network))
+train_dataset(network, 10)
+print(get_f1_score(network))
+train_dataset(network, 10)
+print(get_f1_score(network))

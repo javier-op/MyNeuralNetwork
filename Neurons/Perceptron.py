@@ -46,7 +46,7 @@ class Perceptron:
         self.delta = self.error * self.output * (1.0 - self.output)
 
     def update_weights(self, input_data):
-        self.weights += self.lr * self.delta * input_data
+        self.weights = self.weights + self.lr * self.delta * input_data
 
     def update_bias(self):
         self.bias += self.lr * self.delta

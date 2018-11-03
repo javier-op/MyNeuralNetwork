@@ -107,3 +107,24 @@ class TestNeuralNetwork(unittest.TestCase):
         self.assertAlmostEqual(weights3[0][0], 0.89479, places=4)
         self.assertAlmostEqual(weights3[0][1], 0.89463, places=4)
         self.assertAlmostEqual(bias3[0], 0.89406, places=4)
+
+    @staticmethod
+    def train_multiple_outputs(network, n):
+        for i in range(n):
+            network.train([0, 0], [0, 0])
+            network.train([0, 1], [1, 0])
+            network.train([1, 0], [1, 0])
+            network.train([1, 1], [1, 1])
+
+    def test_multiple_outputs(self):
+        network = NeuralNetwork(Sigmoid, 0.1, [2, 8, 2])
+        self.train_multiple_outputs(network, 1000)
+
+        network.feed([0, 0])
+        print(network.get_output())
+        network.feed([0, 1])
+        print(network.get_output())
+        network.feed([1, 0])
+        print(network.get_output())
+        network.feed([1, 1])
+        print(network.get_output())

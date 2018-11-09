@@ -91,7 +91,7 @@ def get_f1_score(network):
             fn[index[expected]] += 1
     precision = np.mean(tp / (tp + fp + 0.0001))
     recall = np.mean(tp / (tp + fn + 0.0001))
-    return 2 * precision * recall / (precision + recall)
+    return 2 * precision * recall / (precision + recall + 0.01)
 
 
 def f1_score_plot():
@@ -235,9 +235,13 @@ def data_order_plot():
     fig.savefig('data_order', bbox_inches='tight')
 
 
+print('Generando gráfico 1 de 5.')
 f1_score_plot()
+print('Generando gráfico 2 de 5.')
 speed_plot()
+print('Generando gráfico 3 de 5, los siguientes 3 se pueden demorar como una hora. :O')
 hidden_layers_plot()
+print('Generando gráfico 4 de 5.')
 learning_rate_plot()
+print('Generando gráfico 5 de 5.')
 data_order_plot()
-

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2122034e-8bf5-427f-b41d-439ef16c8a66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeuralNetwork/NeuralNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/NeuralNetwork/NeuralNetwork.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeuralNetwork/NeuronLayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/NeuralNetwork/NeuronLayer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tarea1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tarea1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,101 +18,80 @@
     <SUITE FILE_PATH="coverage/MyNeuralNetwork$Unittests_for_TestNeuralNetwork_TestNeuralNetwork_test_train.coverage" NAME="Unittests for TestNeuralNetwork.TestNeuralNetwork.test_train Coverage Results" MODIFIED="1540922537988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/MyNeuralNetwork$Unittests_for_TestNeuralNetwork_TestNeuralNetwork_test_feed.coverage" NAME="Unittests for TestNeuralNetwork.TestNeuralNetwork.test_feed Coverage Results" MODIFIED="1540921700579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/MyNeuralNetwork$Unittests_for_TestNeuralNetwork_TestNeuralNetwork_test_backpropagate.coverage" NAME="Unittests for TestNeuralNetwork.TestNeuralNetwork.test_backpropagate Coverage Results" MODIFIED="1540922050045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
-    <SUITE FILE_PATH="coverage/MyNeuralNetwork$tarea1.coverage" NAME="tarea1 Coverage Results" MODIFIED="1541263028335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MyNeuralNetwork$tarea1.coverage" NAME="tarea1 Coverage Results" MODIFIED="1541728714397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MyNeuralNetwork$Unittests_for_TestNeuralNetwork_TestNeuralNetwork.coverage" NAME="Unittests for TestNeuralNetwork.TestNeuralNetwork Coverage Results" MODIFIED="1540998320101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="619021290">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="py" value="10" />
+          <entry key="png" value="41" />
+          <entry key="py" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="41" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="10" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3086" />
+          <entry key="py" value="5784" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3086" />
+          <entry key="Python" value="5784" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NeuralNetwork/NeuralNetwork.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Neurons/Perceptron.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tarea1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="102" column="28" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
+            <state relative-caret-position="292">
+              <caret line="196" column="36" selection-start-line="196" selection-start-column="36" selection-end-line="196" selection-end-column="36" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1541263028318" expanded="true" signature="429:510" ph="..." />
-                <marker date="1541263028318" expanded="true" signature="1403:1579" ph="..." />
-                <marker date="1541263028318" expanded="true" signature="1753:1758" ph="..." />
-                <marker date="1541263028318" expanded="true" signature="1753:2780" ph="..." />
+                <marker date="1541728714367" expanded="true" signature="461:542" ph="..." />
+                <marker date="1541728714367" expanded="true" signature="2624:3246" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/pandas/core/indexing.py">
+        <entry file="file://$PROJECT_DIR$/NeuralNetwork/NeuralNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21600">
-              <caret line="1463" selection-start-line="1463" selection-end-line="1463" />
+            <state relative-caret-position="532">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/TestNeuralNetwork.py">
+        <entry file="file://$PROJECT_DIR$/NeuralNetwork/NeuronLayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="825">
+              <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -132,6 +114,8 @@
         <option value="$PROJECT_DIR$/NeuralNetwork/__init__.py" />
         <option value="$PROJECT_DIR$/Tests/TestNeuralNetwork.py" />
         <option value="$PROJECT_DIR$/Neurons/Perceptron.py" />
+        <option value="$PROJECT_DIR$/NeuralNetwork/NeuronLayer.py" />
+        <option value="$PROJECT_DIR$/NeuralNetwork/NeuralNetwork.py" />
         <option value="$PROJECT_DIR$/tarea1.py" />
       </list>
     </option>
@@ -356,14 +340,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.257886" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2733813" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995633" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -401,11 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NeuralNetwork/NeuronLayer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-533" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/TestNeuronLayer.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -416,33 +394,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NeuralNetwork/NeuralNetwork.py">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/pandas/core/indexing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="532">
+          <caret line="1463" selection-start-line="1463" selection-end-line="1463" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Neurons/Perceptron.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
+        <state relative-caret-position="705">
           <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/pandas/core/indexing.py">
+    <entry file="file://$PROJECT_DIR$/NeuralNetwork/NeuralNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21600">
-          <caret line="1463" selection-start-line="1463" selection-end-line="1463" />
+        <state relative-caret-position="532">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeuralNetwork/NeuronLayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/TestNeuralNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
+        <state relative-caret-position="836">
           <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
@@ -450,16 +432,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hidden_layers.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tiempo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/f1_score.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learning_rate.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/tarea1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="102" column="28" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
+        <state relative-caret-position="292">
+          <caret line="196" column="36" selection-start-line="196" selection-start-column="36" selection-end-line="196" selection-end-column="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1541263028318" expanded="true" signature="429:510" ph="..." />
-            <marker date="1541263028318" expanded="true" signature="1403:1579" ph="..." />
-            <marker date="1541263028318" expanded="true" signature="1753:1758" ph="..." />
-            <marker date="1541263028318" expanded="true" signature="1753:2780" ph="..." />
+            <marker date="1541728714367" expanded="true" signature="461:542" ph="..." />
+            <marker date="1541728714367" expanded="true" signature="2624:3246" ph="..." />
           </folding>
         </state>
       </provider>

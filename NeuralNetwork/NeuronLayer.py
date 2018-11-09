@@ -53,6 +53,8 @@ class NeuronLayer:
         for i in range(self.size):
             new_error = 0
             for j in range(next_size):
+                a = next_weights[j]
+                b = a[i]
                 new_error += next_weights[j][i] * next_deltas[j]
             self.neurons[i].set_error(new_error)
 

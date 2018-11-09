@@ -27,7 +27,7 @@ class NeuralNetwork:
         self.last_layer.update_deltas()
         weights_list = self.last_layer.get_weights()
         delta_list = self.last_layer.get_deltas()
-        for layer in self.inner_layers:
+        for layer in reversed(self.inner_layers):
             layer.update_errors(weights_list, delta_list)
             layer.update_deltas()
             weights_list = layer.get_weights()

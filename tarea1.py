@@ -91,7 +91,7 @@ def get_f1_score(network):
             fn[index[expected]] += 1
     precision = np.mean(tp / (tp + fp + 0.0001))
     recall = np.mean(tp / (tp + fn + 0.0001))
-    return (precision + recall) / 2
+    return 2 * precision * recall / (precision + recall)
 
 
 def f1_score_plot():
@@ -135,53 +135,44 @@ def speed_plot():
     plt.plot(x, y)
     plt.xlabel('epochs')
     plt.ylabel('milisegundos')
-    fig.savefig('tiempo', bbox_inches='tight')
+    fig.savefig('data_processing', bbox_inches='tight')
 
 
 def hidden_layers_plot():
     n_samples = 10
     x_len = 10
-    x_increment = 5
-    shape = [4, 4]
+    x_increment = 10
+    shapes = [[4, 4, 3], [4, 4, 4, 3], [4, 4, 4, 4, 3], [4, 4, 4, 4, 4, 3]]
     f1_scores = []
-
-    for i in range(3):
-        shape.append(3)
+    for shape in shapes:
         samples = []
-        for j in range(10):
+        for j in range(n_samples):
             network = NeuralNetwork(Sigmoid, 0.2, shape)
             current_score = []
             for k in range(x_len):
                 train_dataset(network, x_increment)
                 current_score.append(get_f1_score(network))
             samples.append(current_score)
-        samples = np.array(samples)
         f1_scores.append(np.mean(samples, axis=0))
-    fig = plt.figure(figsize=(9, 3))
-    x = np.linspace(x_increment, x_increment*x_len, x_len)
-    plt.subplot(1, 3, 1)
-    plt.plot(x, f1_scores[0])
-    plt.xlabel('epochs')
-    plt.ylabel('f1_score')
-    plt.title('0 hidden layers')
-    plt.subplot(1, 3, 2)
-    plt.plot(x, f1_scores[1])
-    plt.xlabel('epochs')
-    plt.ylabel('f1_score')
-    plt.title('1 hidden layer')
-    plt.subplot(1, 3, 3)
-    plt.plot(x, f1_scores[2])
-    plt.xlabel('epochs')
-    plt.ylabel('f1_score')
-    plt.title('2 hidden layers')
+    fig = plt.figure(figsize=(6, 6))
+    x = np.linspace(x_increment, x_increment * x_len, x_len)
+    titles = ['0 hidden layers', '1 hidden layer', '2 hidden layers', '3 hidden layers']
+    for i in range(4):
+        ax = plt.subplot(2, 2, i+1)
+        ax.set_ylim([0, 1])
+        plt.plot(x, f1_scores[i])
+        plt.xlabel('epochs')
+        plt.ylabel('f1_score')
+        plt.title(titles[i])
+    plt.tight_layout(w_pad=1, h_pad=1)
     fig.savefig('hidden_layers', bbox_inches='tight')
 
 
 def learning_rate_plot():
     lrs = [0.001, 0.1, 0.2, 0.5, 1, 5]
-    n_samples = 5
+    n_samples = 10
     x_len = 10
-    x_increment = 5
+    x_increment = 10
     f1_scores = []
     for lr in lrs:
         samples = []
@@ -194,7 +185,7 @@ def learning_rate_plot():
             samples.append(current_scores)
         f1_scores.append(np.mean(samples, axis=0))
     x = np.linspace(x_increment, x_increment*x_len, x_len)
-    fig = plt.figure(figsize=(18, 12))
+    fig = plt.figure(figsize=(9, 6))
     for i in range(6):
         ax = plt.subplot(2, 3, i+1)
         ax.set_ylim([0, 1])
@@ -202,8 +193,51 @@ def learning_rate_plot():
         plt.xlabel('epochs')
         plt.ylabel('f1_score')
         plt.title('lr = ' + str(lrs[i]))
+    plt.tight_layout(w_pad=1, h_pad=1)
     fig.savefig('learning_rate', bbox_inches='tight')
 
 
+def data_order_plot():
+    n_samples = 10
+    x_len = 10
+    x_increment = 10
+    f1_scores_normal = []
+    f1_scores_shuffled = []
+    for i in range(n_samples):
+        network1 = NeuralNetwork(Sigmoid, 0.2, [4, 4, 4, 4, 3])
+        network2 = NeuralNetwork(Sigmoid, 0.2, [4, 4, 4, 4, 3])
+        samples_normal = []
+        samples_shuffled = []
+        for j in range(x_len):
+            train_dataset(network1, x_increment)
+            train_shuffled_dataset(network2, x_increment)
+            samples_normal.append(get_f1_score(network1))
+            samples_shuffled.append((get_f1_score(network2)))
+        f1_scores_normal.append(samples_normal)
+        f1_scores_shuffled.append(samples_shuffled)
+    f1_scores_normal = np.mean(f1_scores_normal, axis=0)
+    f1_scores_shuffled = np.mean(f1_scores_shuffled, axis=0)
+    x = np.linspace(x_increment, x_increment * x_len, x_len)
+    fig = plt.figure(figsize=(6, 3))
+    ax1 = plt.subplot(1, 2, 1)
+    ax1.set_ylim([0, 1])
+    plt.plot(x, f1_scores_normal)
+    plt.xlabel('epochs')
+    plt.ylabel('f1_score')
+    plt.title('Entrenamiento ordenado')
+    ax2 = plt.subplot(1, 2, 2)
+    ax2.set_ylim([0, 1])
+    plt.plot(x, f1_scores_shuffled)
+    plt.xlabel('epochs')
+    plt.ylabel('f1_score')
+    plt.title('Entrenamiento desordenado')
+    plt.tight_layout(w_pad=1, h_pad=1)
+    fig.savefig('data_order', bbox_inches='tight')
+
+
+f1_score_plot()
+speed_plot()
+hidden_layers_plot()
 learning_rate_plot()
+data_order_plot()
 
